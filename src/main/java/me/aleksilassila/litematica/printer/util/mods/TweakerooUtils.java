@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils.mods;
+package me.aleksilassila.litematica.printer.util.mods;
 
 import net.minecraft.core.BlockPos;
 import org.jetbrains.annotations.Nullable;

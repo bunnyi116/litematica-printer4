@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils.mods.bedrock;
+package me.aleksilassila.litematica.printer.util.mods.bedrock;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;

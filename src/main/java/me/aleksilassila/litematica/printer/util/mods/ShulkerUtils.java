@@ -1,10 +1,10 @@
-package me.aleksilassila.litematica.printer.utils.mods;
+package me.aleksilassila.litematica.printer.util.mods;
 
 import fi.dy.masa.malilib.config.IConfigOptionListEntry;
 import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.config.enums.QuickShulkerModeType;
 import me.aleksilassila.litematica.printer.I18n;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
 import net.kyrptonaught.quickshulker.client.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.inventory.ContainerInput;
@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 
 @SuppressWarnings({"DataFlowIssue", "SpellCheckingInspection"})
 public class ShulkerUtils {
-    final static Minecraft client = Minecraft.getInstance();
+    static final Minecraft client = Minecraft.getInstance();
     static IConfigOptionListEntry openMode = Configs.Placement.QUICK_SHULKER_MODE.getOptionListValue();
 
     public static void openShulker(ItemStack stack, int shulkerBoxSlot) {

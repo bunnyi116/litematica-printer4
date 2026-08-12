@@ -2,8 +2,8 @@ package me.aleksilassila.litematica.printer.guide;
 
 import fi.dy.masa.litematica.world.WorldSchematic;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
-import me.aleksilassila.litematica.printer.utils.BlockPosCooldownUtils;
-import me.aleksilassila.litematica.printer.utils.minecraft.BlockStateUtils;
+import me.aleksilassila.litematica.printer.util.BlockPosCooldownUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.BlockStateUtils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;

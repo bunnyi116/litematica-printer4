@@ -10,7 +10,7 @@ import me.aleksilassila.litematica.printer.I18n;
 import me.aleksilassila.litematica.printer.Reference;
 import me.aleksilassila.litematica.printer.mixin.extension.ConfigExtension;
 import me.aleksilassila.litematica.printer.config.Configs;
-import me.aleksilassila.litematica.printer.utils.UpdateCheckerUtils;
+import me.aleksilassila.litematica.printer.util.UpdateCheckerUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import org.jetbrains.annotations.Nullable;

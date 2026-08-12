@@ -6,8 +6,8 @@ import me.aleksilassila.litematica.printer.guide.Guide;
 import me.aleksilassila.litematica.printer.guide.Result;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
 import me.aleksilassila.litematica.printer.action.Action;
-import me.aleksilassila.litematica.printer.utils.InteractionUtils;
-import me.aleksilassila.litematica.printer.utils.minecraft.BlockStateUtils;
+import me.aleksilassila.litematica.printer.util.InteractionUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.BlockStateUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.VineBlock;
 

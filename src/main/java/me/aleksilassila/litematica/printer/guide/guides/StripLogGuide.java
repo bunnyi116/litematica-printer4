@@ -21,7 +21,7 @@ import java.util.Map;
 public class StripLogGuide extends Guide {
 
     @SuppressWarnings("all")
-    private final static Map<Block, Block> STRIPPED_LOGS = AxeItemAccessor.getStrippables();
+    private static final Map<Block, Block> STRIPPED_LOGS = AxeItemAccessor.getStrippables();
 
     public StripLogGuide(SchematicBlockContext context) {
         super(context);

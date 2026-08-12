@@ -6,12 +6,12 @@ import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.config.enums.ExcavateListMode;
 import me.aleksilassila.litematica.printer.config.enums.WorkSingleMode;
 import me.aleksilassila.litematica.printer.module.Module;
-import me.aleksilassila.litematica.printer.utils.BlockPosCooldownUtils;
+import me.aleksilassila.litematica.printer.util.BlockPosCooldownUtils;
 import me.aleksilassila.litematica.printer.mixin.extension.BlockBreakResult;
-import me.aleksilassila.litematica.printer.utils.ConfigUtils;
-import me.aleksilassila.litematica.printer.utils.FilterUtils;
-import me.aleksilassila.litematica.printer.utils.InteractionUtils;
-import me.aleksilassila.litematica.printer.utils.mods.ModLoadUtils;
+import me.aleksilassila.litematica.printer.util.ConfigUtils;
+import me.aleksilassila.litematica.printer.util.FilterUtils;
+import me.aleksilassila.litematica.printer.util.InteractionUtils;
+import me.aleksilassila.litematica.printer.util.mods.ModLoadUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -22,7 +22,7 @@ import static fi.dy.masa.tweakeroo.config.Configs.Lists.BLOCK_TYPE_BREAK_RESTRIC
 import static fi.dy.masa.tweakeroo.tweaks.PlacementTweaks.BLOCK_TYPE_BREAK_RESTRICTION;
 
 public class MineModule extends Module {
-    public final static String NAME = "mine";
+    public static final String NAME = "mine";
 
     public MineModule() {
         super(NAME, WorkSingleMode.MINE, Configs.Core.MINE, Configs.Mine.MINE_SELECTION_TYPE, true);

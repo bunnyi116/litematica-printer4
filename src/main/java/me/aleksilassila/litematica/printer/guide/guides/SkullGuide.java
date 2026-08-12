@@ -5,7 +5,7 @@ import me.aleksilassila.litematica.printer.guide.Guide;
 import me.aleksilassila.litematica.printer.guide.Result;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
 import me.aleksilassila.litematica.printer.action.Action;
-import me.aleksilassila.litematica.printer.utils.minecraft.DirectionUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.DirectionUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.SkullBlock;
 import net.minecraft.world.level.block.WallSkullBlock;

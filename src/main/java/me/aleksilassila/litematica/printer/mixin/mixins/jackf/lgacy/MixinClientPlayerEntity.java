@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Mixin;
 public class MixinClientPlayerEntity {
 }
 //#else
-//$$ import me.aleksilassila.litematica.printer.utils.mods.ModLoadUtils;
+//$$ import me.aleksilassila.litematica.printer.util.mods.ModLoadUtils;
 //$$ import me.aleksilassila.litematica.printer.config.Configs;
 //$$ import me.aleksilassila.litematica.printer.printer.zxy.inventory.OpenInventoryPacket;
 //$$ import me.aleksilassila.litematica.printer.printer.zxy.memory.MemoryUtils;

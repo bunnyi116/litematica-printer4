@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils;
+package me.aleksilassila.litematica.printer.util;
 
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class PinYinSearchUtils {
     // 复用拼音格式配置（常量），避免重复创建
-    private final static HanyuPinyinOutputFormat PINYIN_FORMAT;
+    private static final HanyuPinyinOutputFormat PINYIN_FORMAT;
 
     static {
         // 静态初始化：配置拼音输出格式（小写、无声调、v代替ü）

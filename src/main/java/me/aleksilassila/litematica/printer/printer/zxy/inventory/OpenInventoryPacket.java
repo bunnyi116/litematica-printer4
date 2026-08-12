@@ -6,9 +6,9 @@ import me.aleksilassila.litematica.printer.Debug;
 import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.I18n;
 import me.aleksilassila.litematica.printer.module.Modules;
-import me.aleksilassila.litematica.printer.utils.mods.ModLoadUtils;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
-import me.aleksilassila.litematica.printer.utils.minecraft.IdentifierUtils;
+import me.aleksilassila.litematica.printer.util.mods.ModLoadUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.IdentifierUtils;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.client.Minecraft;
@@ -73,15 +73,15 @@ import net.minecraft.core.registries.Registries;
 //#endif
 
 public class OpenInventoryPacket {
-    private final static @NotNull Minecraft client = Minecraft.getInstance();
-    private final static Identifier OPEN_INVENTORY = IdentifierUtils.of("remoteinventory", "open_inventory");
-    private final static Identifier OPEN_RETURN = IdentifierUtils.of("openreturn", "open_return");
-    private final static Identifier HELLO_REMOTE_INTERACTIONS = IdentifierUtils.of("hello", "hello_remote_interactions");
+    private static final @NotNull Minecraft client = Minecraft.getInstance();
+    private static final Identifier OPEN_INVENTORY = IdentifierUtils.of("remoteinventory", "open_inventory");
+    private static final Identifier OPEN_RETURN = IdentifierUtils.of("openreturn", "open_return");
+    private static final Identifier HELLO_REMOTE_INTERACTIONS = IdentifierUtils.of("hello", "hello_remote_interactions");
 
     //#if MC > 12104
-    private final static TicketType OPEN_TICKET = TicketType.UNKNOWN;
+    private static final TicketType OPEN_TICKET = TicketType.UNKNOWN;
     //#else
-    //$$ private final static TicketType<ChunkPos> OPEN_TICKET = TicketType.create("openInv", Comparator.comparingLong(ChunkPos::toLong), 2);
+    //$$ private static final TicketType<ChunkPos> OPEN_TICKET = TicketType.create("openInv", Comparator.comparingLong(ChunkPos::toLong), 2);
     //#endif
 
     public static HashMap<ServerPlayer, TickList> tickMap = new HashMap<>();
@@ -97,8 +97,8 @@ public class OpenInventoryPacket {
 
     //#if MC > 12004
     public static class OpenPackage implements CustomPacketPayload {
-        public final static Type<OpenPackage> OPEN_INVENTORY_ID = new Type<>(OPEN_INVENTORY);
-        public final static StreamCodec<RegistryFriendlyByteBuf, OpenPackage> CODEC = new StreamCodec<>() {
+        public static final Type<OpenPackage> OPEN_INVENTORY_ID = new Type<>(OPEN_INVENTORY);
+        public static final StreamCodec<RegistryFriendlyByteBuf, OpenPackage> CODEC = new StreamCodec<>() {
 
             @Override
             public void encode(RegistryFriendlyByteBuf buf, OpenPackage value) {
@@ -127,8 +127,8 @@ public class OpenInventoryPacket {
     }
 
     public static class HelloPackage implements CustomPacketPayload {
-        public final static Type<HelloPackage> HELLO_REMOTE_INTERACTIONS_ID = new Type<>(HELLO_REMOTE_INTERACTIONS);
-        public final static StreamCodec<RegistryFriendlyByteBuf, HelloPackage> CODEC = new StreamCodec<>() {
+        public static final Type<HelloPackage> HELLO_REMOTE_INTERACTIONS_ID = new Type<>(HELLO_REMOTE_INTERACTIONS);
+        public static final StreamCodec<RegistryFriendlyByteBuf, HelloPackage> CODEC = new StreamCodec<>() {
             @Override
             public void encode(RegistryFriendlyByteBuf buf, HelloPackage value) {
             }
@@ -148,8 +148,8 @@ public class OpenInventoryPacket {
     public static class ReturnPackage implements CustomPacketPayload {
         BlockState state = null;
         boolean isOpen = false;
-        public final static Type<ReturnPackage> OPEN_RETURN_ID = new Type<>(OPEN_RETURN);
-        public final static StreamCodec<RegistryFriendlyByteBuf, ReturnPackage> CODEC = new StreamCodec<>() {
+        public static final Type<ReturnPackage> OPEN_RETURN_ID = new Type<>(OPEN_RETURN);
+        public static final StreamCodec<RegistryFriendlyByteBuf, ReturnPackage> CODEC = new StreamCodec<>() {
             @Override
             public void encode(RegistryFriendlyByteBuf buf, ReturnPackage value) {
                 buf.writeInt(Block.getId(value.state));

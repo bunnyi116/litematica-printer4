@@ -1,7 +1,7 @@
-package me.aleksilassila.litematica.printer.utils.mods;
+package me.aleksilassila.litematica.printer.util.mods;
 
 import me.aleksilassila.litematica.printer.I18n;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
 import java.lang.reflect.Method;
 
 public class BedrockUtils {
-    private final static Minecraft client = Minecraft.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
     private static Object taskManagerInstance;
     private static Method addBlockTaskMethod;
     private static Method addRegionTaskMethod;

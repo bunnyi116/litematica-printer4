@@ -7,7 +7,7 @@ import me.aleksilassila.litematica.printer.guide.Guide;
 import me.aleksilassila.litematica.printer.guide.Result;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
 import me.aleksilassila.litematica.printer.action.ClickAction;
-import me.aleksilassila.litematica.printer.utils.FilterUtils;
+import me.aleksilassila.litematica.printer.util.FilterUtils;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

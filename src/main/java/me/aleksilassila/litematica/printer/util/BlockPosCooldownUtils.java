@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils;
+package me.aleksilassila.litematica.printer.util;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
@@ -106,7 +106,7 @@ public class BlockPosCooldownUtils {
     }
 
     @SuppressWarnings("ClassCanBeRecord")
-    private final static class Info {
+    private static final class Info {
         private final Identifier dimension;
         private final String type;
         private final BlockPos pos;

@@ -17,9 +17,9 @@ import me.aleksilassila.litematica.printer.action.Action;
 import me.aleksilassila.litematica.printer.action.ActionManager;
 import me.aleksilassila.litematica.printer.action.ClickAction;
 import me.aleksilassila.litematica.printer.guide.Result;
-import me.aleksilassila.litematica.printer.utils.*;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
-import me.aleksilassila.litematica.printer.utils.mods.LitematicaUtils;
+import me.aleksilassila.litematica.printer.util.*;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.mods.LitematicaUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;
@@ -34,7 +34,7 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class PrintModule extends Module {
-    public final static String NAME = "print";
+    public static final String NAME = "print";
 
     @Getter
     @Setter

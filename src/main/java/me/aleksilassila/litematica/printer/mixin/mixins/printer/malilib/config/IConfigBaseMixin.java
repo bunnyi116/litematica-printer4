@@ -3,7 +3,7 @@ package me.aleksilassila.litematica.printer.mixin.mixins.printer.malilib.config;
 import fi.dy.masa.malilib.config.IConfigBase;
 import fi.dy.masa.malilib.config.options.ConfigBase;
 import me.aleksilassila.litematica.printer.mixin.extension.ConfigExtension;
-import me.aleksilassila.litematica.printer.utils.minecraft.StringUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.StringUtils;
 import org.spongepowered.asm.mixin.Mixin;
 
 import org.spongepowered.asm.mixin.injection.At;

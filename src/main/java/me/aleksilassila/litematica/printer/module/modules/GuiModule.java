@@ -8,7 +8,7 @@ import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.guide.BlockMatchResult;
 import me.aleksilassila.litematica.printer.module.Module;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
-import me.aleksilassila.litematica.printer.utils.ConfigUtils;
+import me.aleksilassila.litematica.printer.util.ConfigUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.LiquidBlock;
 import org.jetbrains.annotations.Nullable;
@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class GuiModule extends Module {
-    public final static String NAME = "gui";
+    public static final String NAME = "gui";
 
     @Getter
     private final Progress totalProgress = new Progress(Configs.Core.PRINT);

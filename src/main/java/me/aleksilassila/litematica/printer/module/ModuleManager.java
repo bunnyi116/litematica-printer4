@@ -9,8 +9,8 @@ import me.aleksilassila.litematica.printer.module.modules.*;
 import me.aleksilassila.litematica.printer.action.ActionManager;
 import me.aleksilassila.litematica.printer.printer.zxy.inventory.InventoryUtils;
 import me.aleksilassila.litematica.printer.printer.zxy.utils.ZxyUtils;
-import me.aleksilassila.litematica.printer.utils.BlockPosCooldownUtils;
-import me.aleksilassila.litematica.printer.utils.InteractionUtils;
+import me.aleksilassila.litematica.printer.util.BlockPosCooldownUtils;
+import me.aleksilassila.litematica.printer.util.InteractionUtils;
 import net.minecraft.client.Minecraft;
 
 import static me.aleksilassila.litematica.printer.printer.zxy.inventory.InventoryUtils.isOpenHandler;
@@ -18,7 +18,7 @@ import static me.aleksilassila.litematica.printer.printer.zxy.inventory.Inventor
 
 
 public class ModuleManager {
-    public final static ModuleManager INSTANCE = new ModuleManager();
+    public static final ModuleManager INSTANCE = new ModuleManager();
 
     @Getter
     private long clientTickCount;

@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils.minecraft;
+package me.aleksilassila.litematica.printer.util.minecraft;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
@@ -23,7 +23,7 @@ import java.util.Optional;
 
 @SuppressWarnings("EnhancedSwitchMigration")
 public class PlayerUtils {
-    private final static Minecraft client = Minecraft.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
 
     public static Optional<LocalPlayer> getPlayer() {
         return Optional.ofNullable(client.player);

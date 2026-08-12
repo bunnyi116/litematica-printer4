@@ -1,11 +1,11 @@
-package me.aleksilassila.litematica.printer.utils;
+package me.aleksilassila.litematica.printer.util;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import me.aleksilassila.litematica.printer.Debug;
 import me.aleksilassila.litematica.printer.I18n;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
-import me.aleksilassila.litematica.printer.utils.minecraft.StringUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.StringUtils;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.ChatFormatting;
@@ -27,10 +27,10 @@ import java.util.regex.Pattern;
 
 public class UpdateCheckerUtils {
     // 本地版本（从fabric.mod.json读取）
-    public final static String LOCAL_VERSION = getVersionFromModJson();
+    public static final String LOCAL_VERSION = getVersionFromModJson();
 
     // 语义化版本号正则：匹配v1.2.3、1.2、5等格式，提取数字部分
-    public final static Pattern SEM_VER_PATTERN = Pattern.compile("^v?(\\d+)(?:\\.(\\d+))?(?:\\.(\\d+))?.*$");
+    public static final Pattern SEM_VER_PATTERN = Pattern.compile("^v?(\\d+)(?:\\.(\\d+))?(?:\\.(\\d+))?.*$");
 
     public static void checkForUpdates() {
         CompletableFuture.runAsync(() -> {

@@ -2,7 +2,7 @@ package me.aleksilassila.litematica.printer.mixin.mixins.openinv;
 
 //#if MC >= 260200
 
-import me.aleksilassila.litematica.printer.utils.mods.ModLoadUtils;
+import me.aleksilassila.litematica.printer.util.mods.ModLoadUtils;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;

@@ -8,10 +8,10 @@ import me.aleksilassila.litematica.printer.module.Module;
 import me.aleksilassila.litematica.printer.I18n;
 import me.aleksilassila.litematica.printer.action.Action;
 import me.aleksilassila.litematica.printer.action.ActionManager;
-import me.aleksilassila.litematica.printer.utils.ConfigUtils;
-import me.aleksilassila.litematica.printer.utils.FilterUtils;
-import me.aleksilassila.litematica.printer.utils.InventoryUtils;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.ConfigUtils;
+import me.aleksilassila.litematica.printer.util.FilterUtils;
+import me.aleksilassila.litematica.printer.util.InventoryUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class FillModule extends Module {
-    public final static String NAME = "fill";
+    public static final String NAME = "fill";
 
     private List<String> fillCacheBlocklist = new ArrayList<>();
     @Getter

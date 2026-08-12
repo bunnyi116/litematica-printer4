@@ -2,9 +2,9 @@ package me.aleksilassila.litematica.printer.printer.zxy.inventory;
 
 import me.aleksilassila.litematica.printer.I18n;
 import me.aleksilassila.litematica.printer.module.Modules;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
-import me.aleksilassila.litematica.printer.utils.mods.ModLoadUtils;
-import me.aleksilassila.litematica.printer.utils.mods.ShulkerUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.mods.ModLoadUtils;
+import me.aleksilassila.litematica.printer.util.mods.ShulkerUtils;
 import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.mixin.mixins.printer.litematica.InventoryUtilsAccessor;
 import me.aleksilassila.litematica.printer.printer.zxy.utils.ZxyUtils;
@@ -54,7 +54,7 @@ import static me.aleksilassila.litematica.printer.printer.zxy.inventory.OpenInve
 public class InventoryUtils {
     private static int shulkerCooldown = 0;
 
-    private final static Minecraft client = Minecraft.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
 
     public static boolean isInventory(Level world, BlockPos pos) {
         return fi.dy.masa.malilib.util.InventoryUtils.getInventory(world, pos) != null;
@@ -188,7 +188,7 @@ public class InventoryUtils {
                             c = a == -1 ? c : a;
                             ZxyUtils.switchPlayerInvToHotbarAir(c);
                             fi.dy.masa.malilib.util.InventoryUtils.swapSlots(sc, y, c);
-                            me.aleksilassila.litematica.printer.utils.InventoryUtils.setSelectedSlot(player.getInventory(), c);
+                            me.aleksilassila.litematica.printer.util.InventoryUtils.setSelectedSlot(player.getInventory(), c);
                             player.closeContainer();
                             //刷新濳影盒
                             if (shulkerBoxSlot != -1) {

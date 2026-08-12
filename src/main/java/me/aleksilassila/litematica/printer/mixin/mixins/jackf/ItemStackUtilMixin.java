@@ -6,7 +6,7 @@ package me.aleksilassila.litematica.printer.mixin.mixins.jackf;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import fi.dy.masa.malilib.util.StringUtils;
-import me.aleksilassila.litematica.printer.utils.PinYinSearchUtils;
+import me.aleksilassila.litematica.printer.util.PinYinSearchUtils;
 import net.minecraft.locale.Language;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;

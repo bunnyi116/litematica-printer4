@@ -7,7 +7,7 @@ import me.aleksilassila.litematica.printer.guide.Result;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
 import me.aleksilassila.litematica.printer.action.ClickAction;
 import me.aleksilassila.litematica.printer.Reference;
-import me.aleksilassila.litematica.printer.utils.InteractionUtils;
+import me.aleksilassila.litematica.printer.util.InteractionUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.item.Items;

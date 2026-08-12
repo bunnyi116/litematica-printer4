@@ -3,17 +3,16 @@ package me.aleksilassila.litematica.printer.printer.zxy.utils;
 import fi.dy.masa.litematica.data.DataManager;
 import fi.dy.masa.litematica.selection.AreaSelection;
 import fi.dy.masa.litematica.selection.Box;
-import me.aleksilassila.litematica.printer.Debug;
 import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.I18n;
 import me.aleksilassila.litematica.printer.printer.WorkBox;
 import me.aleksilassila.litematica.printer.printer.zxy.inventory.InventoryUtils;
 import me.aleksilassila.litematica.printer.printer.zxy.inventory.OpenInventoryPacket;
 import me.aleksilassila.litematica.printer.printer.zxy.inventory.SwitchItem;
-import me.aleksilassila.litematica.printer.utils.ConfigUtils;
-import me.aleksilassila.litematica.printer.utils.FilterUtils;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
-import me.aleksilassila.litematica.printer.utils.mods.ModLoadUtils;
+import me.aleksilassila.litematica.printer.util.ConfigUtils;
+import me.aleksilassila.litematica.printer.util.FilterUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.mods.ModLoadUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
@@ -47,7 +46,7 @@ import static me.aleksilassila.litematica.printer.printer.zxy.inventory.OpenInve
 import static net.minecraft.world.level.block.ShulkerBoxBlock.FACING;
 
 public class ZxyUtils {
-    private final static Minecraft client = Minecraft.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
 
     //旧版箱子追踪
     @SuppressWarnings("unused")

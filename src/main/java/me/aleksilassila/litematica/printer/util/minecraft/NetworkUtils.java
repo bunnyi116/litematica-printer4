@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils.minecraft;
+package me.aleksilassila.litematica.printer.util.minecraft;
 
 import me.aleksilassila.litematica.printer.printer.Look;
 import net.minecraft.client.Minecraft;
@@ -10,7 +10,7 @@ import net.minecraft.network.protocol.game.ServerboundMovePlayerPacket;
 
 public class NetworkUtils {
 
-    private final static Minecraft client = Minecraft.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
 
     public static void sendPacket(Packet<?> packet) {
         ClientPacketListener connection = client.getConnection();

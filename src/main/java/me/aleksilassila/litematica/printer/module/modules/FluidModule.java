@@ -5,8 +5,8 @@ import me.aleksilassila.litematica.printer.config.enums.WorkSingleMode;
 import me.aleksilassila.litematica.printer.module.Module;
 import me.aleksilassila.litematica.printer.action.Action;
 import me.aleksilassila.litematica.printer.action.ActionManager;
-import me.aleksilassila.litematica.printer.utils.FilterUtils;
-import me.aleksilassila.litematica.printer.utils.InventoryUtils;
+import me.aleksilassila.litematica.printer.util.FilterUtils;
+import me.aleksilassila.litematica.printer.util.InventoryUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class FluidModule extends Module {
-    public final static String NAME = "fluid";
+    public static final String NAME = "fluid";
 
     private List<String> fillBlocks = new ArrayList<>();
     private List<Item> fillItems = new ArrayList<>();

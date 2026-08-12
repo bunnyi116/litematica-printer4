@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Mixin;
 public class WItemListPanelMixin{
 }
 //#else
-//$$ import me.aleksilassila.litematica.printer.utils.PinYinSearchUtils;
+//$$ import me.aleksilassila.litematica.printer.util.PinYinSearchUtils;
 //$$ import net.minecraft.world.item.ItemStack;
 //$$ import org.jetbrains.annotations.Nullable;
 //$$ import org.spongepowered.asm.mixin.Final;

@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils.minecraft;
+package me.aleksilassila.litematica.printer.util.minecraft;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

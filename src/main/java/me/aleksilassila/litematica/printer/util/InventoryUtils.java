@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils;
+package me.aleksilassila.litematica.printer.util;
 
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Shorts;
@@ -13,7 +13,7 @@ import lombok.Setter;
 import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.mixin.mixins.printer.litematica.EasyPlaceUtilsAccessor;
 import me.aleksilassila.litematica.printer.mixin.mixins.printer.litematica.InventoryUtilsAccessor;
-import me.aleksilassila.litematica.printer.utils.minecraft.PlayerUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.PlayerUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.player.LocalPlayer;
@@ -41,10 +41,10 @@ import static me.aleksilassila.litematica.printer.printer.zxy.inventory.Inventor
 
 @SuppressWarnings({"DataFlowIssue", "SpellCheckingInspection", "GrazieInspection"})
 public class InventoryUtils {
-    private final static Minecraft client = Minecraft.getInstance();
-    private final static int OFFHAND_SLOT_INDEX = 40;
-    private final static long MESSAGE_COOLDOWN_MS = 5000L;
-    private final static Map<String, Long> LAST_MESSAGE_SEND_TIME = new ConcurrentHashMap<>();
+    private static final Minecraft client = Minecraft.getInstance();
+    private static final int OFFHAND_SLOT_INDEX = 40;
+    private static final long MESSAGE_COOLDOWN_MS = 5000L;
+    private static final Map<String, Long> LAST_MESSAGE_SEND_TIME = new ConcurrentHashMap<>();
     @Getter
     @Setter
     private static ItemStack orderlyStoreItem; //有序存放临时存储

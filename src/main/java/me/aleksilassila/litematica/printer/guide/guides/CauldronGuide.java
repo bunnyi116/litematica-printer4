@@ -5,7 +5,7 @@ import me.aleksilassila.litematica.printer.guide.Guide;
 import me.aleksilassila.litematica.printer.guide.Result;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
 import me.aleksilassila.litematica.printer.action.ClickAction;
-import me.aleksilassila.litematica.printer.utils.InventoryUtils;
+import me.aleksilassila.litematica.printer.util.InventoryUtils;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraft.world.item.Items;
 

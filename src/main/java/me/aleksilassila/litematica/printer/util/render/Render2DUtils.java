@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils.render;
+package me.aleksilassila.litematica.printer.util.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
@@ -25,7 +25,7 @@ import java.awt.*;
  * 1.18.x / 1.19.x / 1.20.x / 1.21.1 / 1.21.3+
  */
 public class Render2DUtils {
-    public final static Minecraft client = Minecraft.getInstance();
+    public static final Minecraft client = Minecraft.getInstance();
     private static PoseStack poseStack;
     private static GuiGraphicsExtractor guiGraphics;
 

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Guides {
-    public final static Guides INSTANCE = new Guides();
+    public static final Guides INSTANCE = new Guides();
     private final List<GuideRegistration> registrations = new ArrayList<>();
 
     private Guides() {

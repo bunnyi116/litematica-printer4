@@ -1,10 +1,10 @@
-package me.aleksilassila.litematica.printer.utils;
+package me.aleksilassila.litematica.printer.util;
 
 import fi.dy.masa.malilib.config.options.ConfigOptionList;
 import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.config.enums.*;
-import me.aleksilassila.litematica.printer.utils.minecraft.PlayerUtils;
-import me.aleksilassila.litematica.printer.utils.mods.LitematicaUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.PlayerUtils;
+import me.aleksilassila.litematica.printer.util.mods.LitematicaUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings("BooleanMethodIsAlwaysInverted")
 public class ConfigUtils {
     @NotNull
-    public final static Minecraft client = Minecraft.getInstance();
+    public static final Minecraft client = Minecraft.getInstance();
 
     public static boolean isEnable() {
         return Configs.Core.WORK_SWITCH.getBooleanValue();

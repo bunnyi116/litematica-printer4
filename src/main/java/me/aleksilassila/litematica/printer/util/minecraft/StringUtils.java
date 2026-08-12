@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils.minecraft;
+package me.aleksilassila.litematica.printer.util.minecraft;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -8,7 +8,7 @@ import java.util.StringJoiner;
 
 public class StringUtils {
 
-    public final static MutableComponent EMPTY = literal("");
+    public static final MutableComponent EMPTY = literal("");
 
     public static MutableComponent translatable(String key) {
         //#if MC > 11802

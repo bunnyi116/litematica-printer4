@@ -7,9 +7,9 @@ import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.mixin.extension.MultiPlayerGameModeExtension;
 import me.aleksilassila.litematica.printer.printer.Look;
 import me.aleksilassila.litematica.printer.printer.zxy.inventory.SwitchItem;
-import me.aleksilassila.litematica.printer.utils.minecraft.DirectionUtils;
-import me.aleksilassila.litematica.printer.utils.InventoryUtils;
-import me.aleksilassila.litematica.printer.utils.minecraft.NetworkUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.DirectionUtils;
+import me.aleksilassila.litematica.printer.util.InventoryUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.NetworkUtils;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -29,7 +29,7 @@ import net.minecraft.world.entity.player.Input;
 
 @SuppressWarnings("SpellCheckingInspection")
 public class ActionManager {
-    public final static ActionManager INSTANCE = new ActionManager();
+    public static final ActionManager INSTANCE = new ActionManager();
 
     public BlockPos target;
     public Direction side;

@@ -1,7 +1,7 @@
 package me.aleksilassila.litematica.printer.guide;
 
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
-import me.aleksilassila.litematica.printer.utils.minecraft.BlockStateUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.BlockStateUtils;
 import net.minecraft.world.level.block.state.properties.Property;
 
 public enum BlockMatchResult {

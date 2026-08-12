@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils.mods;
+package me.aleksilassila.litematica.printer.util.mods;
 
 import fi.dy.masa.litematica.data.DataManager;
 import fi.dy.masa.litematica.schematic.placement.SchematicPlacementManager;

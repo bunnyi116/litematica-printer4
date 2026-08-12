@@ -8,8 +8,8 @@ import me.aleksilassila.litematica.printer.module.Modules;
 import me.aleksilassila.litematica.printer.module.modules.GuiModule;
 import me.aleksilassila.litematica.printer.module.modules.PrintModule;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
-import me.aleksilassila.litematica.printer.utils.ConfigUtils;
-import me.aleksilassila.litematica.printer.utils.render.Render2DUtils;
+import me.aleksilassila.litematica.printer.util.ConfigUtils;
+import me.aleksilassila.litematica.printer.util.render.Render2DUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.item.ItemStack;
@@ -18,7 +18,7 @@ import java.awt.*;
 import java.util.HashSet;
 
 public class RenderHud {
-    public final static RenderHud INSTANCE = new RenderHud();
+    public static final RenderHud INSTANCE = new RenderHud();
 
     public void render(float scaledWidth, float scaledHeight) {
         if (Configs.Core.RENDER_HUD.getBooleanValue()) {

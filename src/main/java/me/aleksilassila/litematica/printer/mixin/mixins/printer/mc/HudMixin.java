@@ -2,8 +2,8 @@ package me.aleksilassila.litematica.printer.mixin.mixins.printer.mc;
 
 //#if MC>= 260200
 import me.aleksilassila.litematica.printer.render.Render2D;
-import me.aleksilassila.litematica.printer.utils.render.Render2DUtils;
-import me.aleksilassila.litematica.printer.utils.ConfigUtils;
+import me.aleksilassila.litematica.printer.util.render.Render2DUtils;
+import me.aleksilassila.litematica.printer.util.ConfigUtils;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;

@@ -1,4 +1,4 @@
-package me.aleksilassila.litematica.printer.utils;
+package me.aleksilassila.litematica.printer.util;
 
 import fi.dy.masa.malilib.config.IConfigOptionListEntry;
 import fi.dy.masa.malilib.util.restrictions.UsageRestriction;
@@ -7,8 +7,8 @@ import me.aleksilassila.litematica.printer.config.enums.ExcavateListMode;
 import me.aleksilassila.litematica.printer.mixin.extension.BlockBreakResult;
 import me.aleksilassila.litematica.printer.mixin.extension.MultiPlayerGameModeExtension;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
-import me.aleksilassila.litematica.printer.utils.mods.ModLoadUtils;
-import me.aleksilassila.litematica.printer.utils.mods.TweakerooUtils;
+import me.aleksilassila.litematica.printer.util.mods.ModLoadUtils;
+import me.aleksilassila.litematica.printer.util.mods.TweakerooUtils;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
@@ -33,8 +33,8 @@ import static fi.dy.masa.tweakeroo.tweaks.PlacementTweaks.BLOCK_TYPE_BREAK_RESTR
 @SuppressWarnings({"DataFlowIssue", "BooleanMethodIsAlwaysInverted"})
 @Environment(EnvType.CLIENT)
 public class InteractionUtils {
-    public final static Minecraft client = Minecraft.getInstance();
-    public final static InteractionUtils INSTANCE = new InteractionUtils();
+    public static final Minecraft client = Minecraft.getInstance();
+    public static final InteractionUtils INSTANCE = new InteractionUtils();
 
     private final Queue<BlockPos> breakQueue = new LinkedList<>();
     private BlockPos breakPos;

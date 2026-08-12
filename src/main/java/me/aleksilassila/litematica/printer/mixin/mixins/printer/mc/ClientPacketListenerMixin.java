@@ -2,7 +2,7 @@ package me.aleksilassila.litematica.printer.mixin.mixins.printer.mc;
 
 import me.aleksilassila.litematica.printer.I18n;
 import me.aleksilassila.litematica.printer.config.Configs;
-import me.aleksilassila.litematica.printer.utils.minecraft.MessageUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.MessageUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.player.LocalPlayer;

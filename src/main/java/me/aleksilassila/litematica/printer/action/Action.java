@@ -4,7 +4,7 @@ import lombok.Getter;
 import me.aleksilassila.litematica.printer.Reference;
 import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.printer.Look;
-import me.aleksilassila.litematica.printer.utils.minecraft.BlockUtils;
+import me.aleksilassila.litematica.printer.util.minecraft.BlockUtils;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
