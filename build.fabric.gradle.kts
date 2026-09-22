@@ -67,23 +67,23 @@ dependencies {
     implementation("maven.modrinth:tweakeroo:${prop("tweakeroo")}")
 
     // 箱子追踪
-    implementation("maven.modrinth:chest-tracker-port:${prop("chesttracker")}")
-    implementation("com.github.bunnyi116:JackFredLib:${prop("jackfredlib")}")
-    implementation("maven.modrinth:where-is-it-port:${prop("whereisit")}")
+    compileOnly("maven.modrinth:chest-tracker-port:${prop("chesttracker")}")
+    compileOnly("com.github.bunnyi116:JackFredLib:${prop("jackfredlib")}")
+    compileOnly("maven.modrinth:where-is-it-port:${prop("whereisit")}")
 
-    implementation("dev.isxander:yet-another-config-lib:${prop("yacl")}")
-    implementation("com.blamejared.searchables:${prop("searchables")}")
+    compileOnly("dev.isxander:yet-another-config-lib:${prop("yacl")}")
+    compileOnly("com.blamejared.searchables:${prop("searchables")}")
 
     // 快捷潜影盒
     val quickshulkerUrl = prop("quickshulker").toString()
     if (quickshulkerUrl.isNotEmpty()) {
         val quickshulkerFile = downloadDependencyMod(quickshulkerUrl)
         if (quickshulkerFile != null && quickshulkerFile.exists()) {
-            implementation(files(quickshulkerFile))
+            compileOnly(files(quickshulkerFile))
         }
     }
 
-    implementation("me.fallenbreath:conditional-mixin-fabric:0.6.4")
+    compileOnly("me.fallenbreath:conditional-mixin-fabric:0.6.4")
 }
 
 loom {

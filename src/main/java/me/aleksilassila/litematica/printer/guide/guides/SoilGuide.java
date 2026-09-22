@@ -32,7 +32,12 @@ public class SoilGuide extends Guide {
                     )
             );
         }
+
+        //#if MC >= 260300
+        //$$ if (requiredBlock instanceof net.minecraft.world.level.block.PathBlock) {
+        //#else
         if (requiredBlock instanceof net.minecraft.world.level.block.DirtPathBlock) {
+        //#endif
             return Result.success(new Action()
                     .setItems(
                             Items.DIRT,
@@ -60,7 +65,11 @@ public class SoilGuide extends Guide {
                 }
             }
         }
+        //#if MC >= 260300
+        //$$ if (requiredBlock instanceof net.minecraft.world.level.block.PathBlock) {
+        //#else
         if (requiredBlock instanceof net.minecraft.world.level.block.DirtPathBlock) {
+        //#endif
             Block[] soilBlocks = {
                     Blocks.GRASS_BLOCK,
                     Blocks.DIRT,

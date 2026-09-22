@@ -1,6 +1,5 @@
 package me.aleksilassila.litematica.printer.guide.guides;
 
-import me.aleksilassila.litematica.printer.Reference;
 import me.aleksilassila.litematica.printer.config.Configs;
 import me.aleksilassila.litematica.printer.guide.BlockMatchResult;
 import me.aleksilassila.litematica.printer.guide.Guide;
@@ -8,11 +7,14 @@ import me.aleksilassila.litematica.printer.guide.Result;
 import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
 import me.aleksilassila.litematica.printer.action.ClickAction;
 import me.aleksilassila.litematica.printer.util.FilterUtils;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,6 +23,15 @@ import java.util.List;
 public class ComposterGuide extends Guide {
     private static List<String> compostWhitelistCache = new ArrayList<>();
     private static Item[] whitelistItemsCache = new Item[0];
+
+    //#if MC >= 260300
+    //$$ public static final Item[] COMPOSTABLE_ITEMS = BuiltInRegistries.ITEM
+    //$$         .stream()
+    //$$         .filter(item -> new ItemStack(item).has(net.minecraft.core.component.DataComponents.COMPOSTABLE))
+    //$$         .toArray(Item[]::new);
+    //#else
+    public static final Item[] COMPOSTABLE_ITEMS = Arrays.stream(ComposterBlock.COMPOSTABLES.keySet().toArray(ItemLike[]::new)).map(ItemLike::asItem).toArray(Item[]::new);
+    //#endif
 
     public ComposterGuide(SchematicBlockContext context) {
         super(context);
@@ -42,7 +53,7 @@ public class ComposterGuide extends Guide {
         if (!whitelist.equals(compostWhitelistCache)) {
             compostWhitelistCache = new ArrayList<>(whitelist);
             List<Item> whitelistItems = new ArrayList<>();
-            for (Item item : Reference.COMPOSTABLE_ITEMS) {
+            for (Item item : COMPOSTABLE_ITEMS) {
                 for (String rule : whitelist) {
                     if (FilterUtils.matchName(rule, new ItemStack(item))) {
                         whitelistItems.add(item);
@@ -53,7 +64,7 @@ public class ComposterGuide extends Guide {
             whitelistItemsCache = whitelistItems.toArray(Item[]::new);
         }
 
-        Item[] finalItems = whitelistItemsCache.length > 0 ? whitelistItemsCache : Reference.COMPOSTABLE_ITEMS;
+        Item[] finalItems = whitelistItemsCache.length > 0 ? whitelistItemsCache : COMPOSTABLE_ITEMS;
         if (finalItems.length > 0) {
             return Result.success(new ClickAction().setItems(finalItems));
         }

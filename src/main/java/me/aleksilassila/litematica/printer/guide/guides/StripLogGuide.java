@@ -8,7 +8,6 @@ import me.aleksilassila.litematica.printer.printer.SchematicBlockContext;
 import me.aleksilassila.litematica.printer.action.Action;
 import me.aleksilassila.litematica.printer.action.ClickAction;
 import me.aleksilassila.litematica.printer.Reference;
-import net.fabricmc.fabric.mixin.content.registry.AxeItemAccessor;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -19,9 +18,6 @@ import java.util.Map;
  * 去皮原木
  */
 public class StripLogGuide extends Guide {
-
-    @SuppressWarnings("all")
-    private static final Map<Block, Block> STRIPPED_LOGS = AxeItemAccessor.getStrippables();
 
     public StripLogGuide(SchematicBlockContext context) {
         super(context);
@@ -36,7 +32,7 @@ public class StripLogGuide extends Guide {
 
         // 配置启用去皮时，可接受原版或去皮版本
         if (Configs.Print.STRIP_LOGS.getBooleanValue()) {
-            for (Map.Entry<Block, Block> entry : STRIPPED_LOGS.entrySet()) {
+            for (Map.Entry<Block, Block> entry : Reference.STRIPPABLES.entrySet()) {
                 if (requiredBlock == entry.getValue()) {
                     action.setItems(entry.getValue().asItem(), entry.getKey().asItem());
                     return Result.success(action);
@@ -52,7 +48,7 @@ public class StripLogGuide extends Guide {
         if (Configs.Print.BREAK_WRONG_BLOCK.getBooleanValue()) {
             return Result.skipOtherGuide();
         }
-        Block stripped = STRIPPED_LOGS.get(currentBlock);
+        Block stripped = Reference.STRIPPABLES.get(currentBlock);
         if (stripped != null && stripped == requiredBlock) {
             return Result.success(new ClickAction().setItems(Reference.AXE_ITEMS));
         }

@@ -40,7 +40,11 @@ import org.joml.Vector4f;
 
 //#if MC >= 260100
 import org.joml.Matrix4fc;
+//#if MC >= 260300
+//$$ import com.mojang.renderpearl.api.buffers.GpuBufferSlice;
+//#else
 import com.mojang.blaze3d.buffers.GpuBufferSlice;
+//#endif
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 //#else
 //$$ import org.joml.Matrix4f;
@@ -92,8 +96,10 @@ public class HighlightBlockRenderer implements IRenderer {
     }
 
     // @formatter:off
-    //#if MC >= 260100
-    public void test3(Matrix4fc matrices, Color4f color4f, Set<BlockPos> posSet) {
+    //#if MC >= 260300
+    public void test3(Color4f color4f, Set<BlockPos> posSet) {
+    //#elseif MC >= 260100
+    //$$ public void test3(Matrix4fc matrices, Color4f color4f, Set<BlockPos> posSet) {
     //#elseif MC > 12004
     //$$ public void test3(Matrix4f matrices, Color4f color4f, Set<BlockPos> posSet) {
     //#else
@@ -186,7 +192,9 @@ public class HighlightBlockRenderer implements IRenderer {
     }
 
     @Override
-    //#if MC >= 260100
+    //#if MC >= 260300
+    //$$ public void onRenderWorldLast(RenderTarget fb, CameraRenderState cameraState, Frustum culling, RenderBuffers buffers, GpuBufferSlice terrainFog, Vector4f fogColor, ProfilerFiller profiler) {
+    //#elseif MC >= 260100
     public void onRenderWorldLast(RenderTarget fb, Matrix4fc matrices, CameraRenderState cameraState, Frustum culling, RenderBuffers buffers, GpuBufferSlice terrainFog, Vector4f fogColor, ProfilerFiller profiler) {
     //#elseif MC > 12004
     //$$ public void onRenderWorldLast(Matrix4f matrices, Matrix4f projMatrix) {
@@ -213,12 +221,14 @@ public class HighlightBlockRenderer implements IRenderer {
 
         shaderIng = true;
         highlightTheProjectMap.entrySet().stream().parallel().forEach(stringHighlightTheProjectEntry -> {
-            String key = stringHighlightTheProjectEntry.getKey();
+//            String key = stringHighlightTheProjectEntry.getKey();
             HighlightTheProject value = stringHighlightTheProjectEntry.getValue();
-
             Color4f color = value.color4f.getColor();
-            test3(matrices, color, value.pos);
-
+            //#if MC >= 26.3
+            test3(color, value.pos);
+            //#else
+            //$$ test3(matrices, color, value.pos);
+            //#endif
         });
         shaderIng = false;
     }
